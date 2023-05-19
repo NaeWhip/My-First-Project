@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), 
+    url("../img/BarberXShop.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.menu-item {
+    display: inline-block;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgreen;
+}
+
+a:visited {
+    color: powderblue;
+}
+
+a:link {
+    color: orange;
+}
+
+a:visited {
+    color: teal;
+}
+
+.topnav {
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+}
+
+.logo {
+    width: 300px;
+    cursor: pointer;
+}
+
+.topnav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.topnav ul li a {
+    text-decoration: none;
+    color: rgb(241, 59, 27);
+    text-transform: uppercase;
+}
+
+.topnav ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+
+.topnav ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin: 0; 
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/* Forms */
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: lightblue;
+}
+
+input[type=submit] {
+    background-color: #009688;
+    color: white;
+    padding: 10px 15px;
+    border: 0;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: aquamarine;
+}
+
+.contact-container {
+    background-color: grey;
+    padding: 25px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    background: skyblue;
+}
+.footer {
+    background-color: lightblue;
+    padding: 15px;
+    color:#009688;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: skyblue;
+}
+
+.footer-bottom {
+    background-color: skyblue;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    font-size: 1.0rem;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff; 
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: lightblue;
+}
