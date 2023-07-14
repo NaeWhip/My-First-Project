@@ -166,15 +166,15 @@ a:visited {
     top: 85px;
     height: 0;
     width: 300px;
-    background: rgb(24, 56, 24);
+    background: rgb(109, 8, 8);
     backdrop-filter: blur(15px);
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open {
-    height: 260px;
+    height: 230px;
 }
 
 .dropdown_menu li {
@@ -182,6 +182,14 @@ a:visited {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.dropdown_menu li a {
+    color: lightgreen;
+}
+
+.dropdown_menu li a:hover {
+    color: rgb(208, 220, 88);
 }
 
 .dropdown_menu .action_btn {
