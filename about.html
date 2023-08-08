@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <title>About Us | BarberXshop</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+    <nav>
+        <div class ="logo">
+            <img src="img/prologotwo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+             <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        <div class="dropdown_menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </div> 
+        </nav>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+            
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenuy.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+    <section class="about">
+        <div class="main">
+            <img src="img/me.png">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <h5>Computer Science Major</h5>
+                <p> My name is Darnae Morris and I am the creator of this website. I'm a Computer Science major that is currently a student attending a community college to earn an Associates degree in Computer Science. I've recently learned some coding languages such as HTML, CSS, Javascript, and C++. Even though I am still learning, I hope to keep progressing, and enhancing my skills to be better than I am today! This is my first project to showcase some of the things I have learned recently and looking to create more projects other than websites. Let's just say that I'm testing out new waters. </p>
+                <button type="button">Contact Me</button>
+            </div>
+            
+
+        </div>
+    </section>
+
+</body>
+</html>

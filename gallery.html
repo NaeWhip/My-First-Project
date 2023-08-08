@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/828b2d75ec.js" crossorigin="anonymous"></script>
+    <title>Gallery | BarberXshop</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+</head>
+<body>
+    <nav>
+        <div class ="logo">
+            <img src="img/prologotwo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+             <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        <div class="dropdown_menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </div> 
+        </nav>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+            
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenuy.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+
+    <div class="full-img" id="fullImgBox">
+        <img src="img/image1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    
+    <section class="gallery">
+        <div class="head">
+            <h2>Gallery</h2>
+        </div>
+        <div class="img-gallery">
+            <img src="img/image1.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image2.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image3.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image4.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image5.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image6.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image7.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image8.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image9.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image10.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image11.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image12.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image13.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image14.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image15.jpg" onclick="openFullImg(this.src)">
+            <img src="img/image16.jpg" onclick="openFullImg(this.src)">
+        </div>
+    </section>
+
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic) {
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+
+        function closeFullImg() {
+            fullImgBox.style.display = "none";
+        }
+    </script>
+    </section>
+</body>
