@@ -11,6 +11,44 @@
     <link rel="stylesheet" href="./css/service.css">
 </head>
 <body>
+    <nav>
+        <div class ="logo">
+            <img src="img/prologotwo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+             <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        <div class="dropdown_menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </div> 
+        </nav>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+            
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+    
     <div class="group">
         <h1>Our Services</h1>
         <div class="row">
