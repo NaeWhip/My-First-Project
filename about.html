@@ -52,6 +52,12 @@
                 : 'fa-solid fa-bars'
             }
         </script>
+                <script type="text/javascript">
+                    window.addEventListener("scroll", function() {
+                        var nav = document.querySelector("nav");
+                        nav.classList.toggle("sticky", window.scrollY > 0);
+                    })
+                </script>
     <section class="about">
         <div class="main">
             <img src="img/me.png">
@@ -65,6 +71,32 @@
 
         </div>
     </section>
+ <!-- Footer -->
+ <footer>
+    <div class="footer-content">
+        <div class="pic"> 
+            <img src="img/prologotwo.png" alt="logo">
+        </div>
 
+        <div class="content-wrap">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+
+        <div class="footerNav">
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+        
+        <div class="footerBottom">
+            <p>Copyright &copy;2023 BarberXshop; Designed by <span class="designer">Darnae Morris</span></p>
+        </div>
+</footer>
 </body>
 </html>
