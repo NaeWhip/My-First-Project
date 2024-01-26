@@ -25,9 +25,10 @@
                 <li><a href="service.html">Service</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
             </ul>
+
                  <div class="toggle_btn">
                     <i class="fa-solid fa-bars"></i>
-                </div>
+                 </div>
 
             <div class="dropdown_menu">
                 <li><a class="active" href="index.html">Home</a></li>
@@ -38,6 +39,7 @@
             </div> 
             </nav>
         </header>
+        
             <script>
                 const toggleBtn = document.querySelector('.toggle_btn')
                 const toggleBtnIcon = document.querySelector('.toggle_btn i')
@@ -59,6 +61,18 @@
                         nav.classList.toggle("sticky", window.scrollY > 0);
                     })
                 </script>
+
+            <script>
+                function myFunction () {
+                    var x = document.getElementById("myDropdown");
+                    if (x.className === "dropdown") {
+                        x.className += " responsive";
+                    } 
+                    else {
+                        x.className = "dropdown";
+                    }
+                }
+            </script>
         
     <div class="content">
         <h2> Making You Look Your Very Best </h2>
@@ -68,6 +82,7 @@
         <button class="btn btn2">Learn More</button>
         </div>
     </div>
+
     <section class="products">
         <h1>Top Products</h1>
         <ul class="product-list">
@@ -109,9 +124,18 @@
         </ul>
        
     </section>
-
-    <section class="second-transition-page"> 
         
+    <div class="section-background"> 
+        <img src="img/secondpic.jpg" alt="second">
+    </div>
+
+    <!--Review page-->
+    <section class= "reviews">
+        <div class= "review-border">
+        <div class="review-background"> </div>
+    </div>
+    <h2 class="reviews-title"> Testimonials </h2> 
+    
     </section>
 
     <!-- Footer -->
