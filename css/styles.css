@@ -9,7 +9,6 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
 }
 
 header {
@@ -18,9 +17,8 @@ header {
 }
 
 .banner {
-    width: 100%;
     height: 100vh;
-    padding: 10px;
+    width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), 
     url("../img/BarberXShop.jpg");
     background-size: cover;
@@ -31,6 +29,8 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow-x: hidden;
+   
 }
 
 .logo {
@@ -102,7 +102,7 @@ nav.logo {
 
 nav.sticky {
     padding: 5px 60px;
-    background: skyblue;
+    background: #4C1C24;
 }
 
 nav.sticky ul li a {
@@ -111,8 +111,10 @@ nav.sticky ul li a {
 
   .toggle_btn {
     width: 5%;
-    color: #fff;
-    font-size: 1.5rem;
+    color: rgb(199,21,8);
+    font-size: 1.5em;
+    margin-right: 70px;
+    float: right;
     cursor: pointer;
 }
 
@@ -172,10 +174,34 @@ a:visited {
     color: teal;
 }
 
+.content {
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin: 0; 
+}
+
+.content h2 {
+    color: rgb(199, 21, 8);
+    font-size: 3rem;
+}
+
+.content p {
+    display: block;
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 25px;
+    color:rgb(199, 21, 8);
+}
+
 /* DROPDOWN MENU */
  .dropdown_menu {
     position: absolute; 
-    right: 8rem;
+    right: 10rem;
     top: 105px;
     height: 0;
     width: 300px;
@@ -216,31 +242,6 @@ a:visited {
     justify-content: center;
 }
 
-
-.content {
-    text-align: center;
-    color: #fff;
-}
-
-.content h1 {
-    font-size: 3rem;
-    margin: 0; 
-}
-
-.content h2 {
-    color: rgb(199, 21, 8);
-    font-size: 3rem;
-}
-
-.content p {
-    display:block;
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-    font-size: 25px;
-    color:rgb(199, 21, 8);
-}
-
 /* Forms */
 
 input[type=text], textarea {
@@ -279,8 +280,6 @@ input[type=submit]:hover {
 
 footer {
     display: block;
-    background-color: lightblue;
-    color:#009688;
 }
 
 .footer-content {
@@ -290,7 +289,8 @@ footer {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: skyblue;
+    background-color: #4C1C24;
+    
 }
 
 .pic {
@@ -372,7 +372,7 @@ footer {
     margin: 0px 5px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .footerNav ul {
         flex-direction: column;
     }
@@ -387,17 +387,16 @@ footer {
 /* Products */
 
 .products {
-    width: 100%;
-    height: 55vh;
-    padding: 10px;
+    padding: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     background-color: #811008;
+    overflow-x: clip;
 }
 
 .products h1 {
+    text-align: center;
     margin-bottom: 120px;
     font-size: 35px;
     font-weight: 800;
@@ -407,8 +406,11 @@ footer {
 
 .product-list {
     display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-content: space-evenly;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     grid-gap: 30px;
 }
 
@@ -437,12 +439,16 @@ footer {
 }
 
 .product-items:hover {
-    transform: scale(1.12);
+    transform: scale(1.05);
 }
 
 .product-image {
-    width: 300px;
-    height: 250px;
+    display: inline;
+    flex-shrink: inherit;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .product-price {
@@ -454,105 +460,124 @@ footer {
 }
 
 ul {
-   list-style: none; 
-}
-
-.add-to-cart {
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer
-}
-
-@media screen and (min-width: 400px) and (orientation: portrait) {
-    .products {
-        font-size: calc((var(--normal-text-size-value) - 1) * calc(.012 * min(100vh,
-        900px)) + 1rem);
-    }
-}
-
-@media screen and (min-width: 400px) {
-
-   
-
-    .product-list ul {
-        width: 100%;
-        height: 50%;
-    }
-    
-    .product-items {
-        width: 100%;
-        text-align: center;
-        margin: 10px;
-    }
-
-    .products h1 {
-        margin: 25px;
-    }
-}
+    list-style: none; 
+ }
+ 
+ .add-to-cart {
+     padding: 10px 20px;
+     color: #fff;
+     background-color: #007bff;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer
+ }
 
 /*Second Transition*/
 
+.section-background { 
+    display: flex; 
+    overflow: hidden;
+}
+
 .section-background img {
-    position: relative;
     object-fit: cover;
+    object-position: top center;
     width: 100%;
     max-height: 80vh;
 }
 
 img {
-    image-resolution: 300dpi;
     border: 0;
     overflow-clip-margin: content-box;
     overflow: clip;
 }
 
-.section-background {
-    overflow: hidden;
-    pointer-events: none;
+
+/* Testimonials */
+
+.testimonials {
+    padding: 40px 0;
+    background: rgb(177, 145, 78);
+    color: black;
+    text-align: center;
+    overflow-x: hidden;
 }
 
+.test-title {
+    font-family: 'Oswald', sans-serif;;
+    font-size: 2em;
+    letter-spacing: 3px;
+    
+}
+
+.testimonials p {
+    font-style: italic;
+}
+.test-inner {
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.test-border {
+    background: rgb(177, 145, 78);
+    margin: 26px auto;
+}
+
+.test-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.test-col {
+    flex: 33.33%;
+    box-sizing: border-box;
+    padding: 15px 100px;
+}
+
+.testimonial {
+    background: #fff;
+    padding: 30px 150px;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.stars {
+    color: #6ab04c;
+    margin-bottom: 20px;
+}
 /* RESPONSIVE DESIGN */
 
  /* Currently working on THIS */ 
  
- @media (max-width: 1536px) {
-    body {
-        max-width: 1536px;
-    }
-}
-
-@media (max-width: 1280px) {
-    body {
-        max-width: 1280px;
-    }
-}
-
-@media (max-width: 1024px) {
-    body {
-        max-width: 1024px;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        max-width: 768px;
-    }
+ @media only screen and (max-width: 1536px) {
    
-    nav ul, .action_btn {
+   
+ nav ul {
         display: none;
     }
 
-    .toggle_btn {
-        display: initial;
-        position: absolute;
-        top: 66px;
-        right: 0;
-        left: 70%;
-        width: 100%;
+ }
+
+@media only screen and (max-width: 858px) {
+
+    .col {
+        flex: 80%;
+        max-width: 60%;
     }
 
+    .toggle_btn {
+        display: block;
+    }
 
 }

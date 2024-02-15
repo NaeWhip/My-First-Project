@@ -1,7 +1,20 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 /* Forms */
 
 input[type=text], textarea {
-    width: 100%;
     padding: 10px;
     box-sizing: border-box;
     margin-top: 5px;
@@ -112,12 +125,16 @@ input[type=submit]:hover {
 }
 
 .contact .content h2 {
+    padding: 50px 100px;
+    margin-top: 30px;
+    text-align: center;
     font-size: 52px;
     font-weight: 500;
     color: #e90e3d;
 }
 
 .contact .content p {
+    width: 100%;
     font-size: 20px;
     font-weight: 300;
     color:#fff;
@@ -135,6 +152,7 @@ input[type=submit]:hover {
     width: 50%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .container .contactInfo .box {
@@ -156,6 +174,7 @@ input[type=submit]:hover {
 
 .container .contactInfo .box .text {
     display: flex;
+    width: 100%;
     margin-left: 20px;
     font-size: 22px;
     color: #fff;
@@ -217,7 +236,7 @@ input[type=submit]:hover {
  {
     color: #00bcd4;
     font-size: 12px;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
 
 .contactForm .inputBox input[type="submit"] {
@@ -232,7 +251,7 @@ input[type=submit]:hover {
 
 @media (max-width: 991px) {
     .contact {
-        padding: 50px;
+        padding: 30px;
     }
 
     .container {
@@ -248,9 +267,9 @@ input[type=submit]:hover {
 nav {
     width: 100%;
     margin: 0 auto;
-    padding: 40px 100px;
+    padding: 40px 60px;
     height: 60px;
-    max-width: 2350px;
+    max-width: 2620px;
     z-index: 100000;
     display: flex;
     align-items: center;
@@ -276,7 +295,7 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    margin: 0 20px;
+    margin: 0px 45px;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
@@ -286,7 +305,7 @@ nav ul li a {
     transition: 0.6s;
 }
 
-nav ul li::after {
+nav ul li a::after {
     content: '';
     height: 3px;
     width: 0;
@@ -297,7 +316,7 @@ nav ul li::after {
     transition: 0.6s;
 
 }
-nav ul li:hover::after {
+nav ul li a:hover::after {
     width: 100%;
 }
 
@@ -307,18 +326,25 @@ nav.logo {
 }
 
 nav.sticky {
-    padding: 5px 100px;
-    background: rgb(32, 192, 192);
+    padding: 5px 60px;
+    background: rgb(78, 34, 28);
 }
 
 nav.sticky ul li a {
-    color:rgb(199, 21, 8);
+    color:red;
 }
 
-nav .toggle_btn {
-    color: #fff;
-    font-size: 1.5rem;
+  .toggle_btn {
+    width: 5%;
+    color: rgb(248, 0, 0);
+    font-size: 1.5em;
+    margin-right: 70px;
+    float: right;
     cursor: pointer;
+}
+
+nav.sticky .toggle_btn {
+    color: red;
 }
 
 .action_btn {
@@ -380,11 +406,11 @@ a:visited {
 /* DROPDOWN MENU */
 .dropdown_menu {
     position: absolute;
-    right: 2rem;
+    right: 10rem;
     top: 85px;
     height: 0;
     width: 300px;
-    background: rgb(82, 59, 59);
+    background: rgb(61, 4, 4);
     backdrop-filter: blur(15px);
     border-radius: 5px;
     overflow: hidden;
@@ -403,7 +429,7 @@ a:visited {
 }
 
 .dropdown_menu li a {
-    color: lightgreen;
+    color: #fff;
 }
 
 .dropdown_menu li a:hover {
@@ -511,14 +537,26 @@ a:visited {
     margin: 0px 5px;
 }
 
-@media (max-width: 700px) {
-    .footerNav ul {
-        flex-direction: column;
+@media only screen and (max-width: 1536px) {
+   
+   
+    nav ul {
+           display: none;
+       }
+   
     }
 
-    .footerNav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px;
+    @media only screen and (max-width: 858px) {
+
+        .toggle_btn {
+            display: block;
+        }
     }
-}
+
+    @media screen and (max-width: 767px) {
+        .container .contactInfo .box .text {
+            width: 100%;
+        }
+    }
+
+

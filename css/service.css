@@ -1,11 +1,25 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 .group {
     position: relative;
     min-height: 100vh;
-    padding: 0px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     background: url(../img/servicebg.png);
     background-size: cover;
 }
@@ -13,8 +27,8 @@
 .group h1 {
     letter-spacing: 2px;
     text-align: center;
-    padding-top: 0%;
-    margin-bottom: 60px;
+    margin: 0;
+    margin-bottom: 40px;
     font-weight: 600;
     position: relative;
 }
@@ -33,6 +47,8 @@
 .row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-evenly;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
 }
@@ -46,7 +62,7 @@
 }
 
 .service i {
-    font-size: 40px;
+    font-size: 3rem;
     margin-bottom: 10px;
     color: skyblue;
 }
@@ -74,9 +90,9 @@
 nav {
     width: 100%;
     margin: 0 auto;
-    padding: 40px 100px;
+    padding: 40px 60px;
     height: 60px;
-    max-width: 2350px;
+    max-width: 2620px;
     z-index: 100000;
     display: flex;
     align-items: center;
@@ -102,7 +118,7 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    margin: 0 20px;
+    margin: 0px 45px;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
@@ -112,7 +128,7 @@ nav ul li a {
     transition: 0.6s;
 }
 
-nav ul li::after {
+nav ul li a::after {
     content: '';
     height: 3px;
     width: 0;
@@ -123,7 +139,7 @@ nav ul li::after {
     transition: 0.6s;
 
 }
-nav ul li:hover::after {
+nav ul li a:hover::after {
     width: 100%;
 }
 
@@ -133,17 +149,20 @@ nav.logo {
 }
 
 nav.sticky {
-    padding: 5px 100px;
-    background: skyblue;
+    padding: 5px 60px;
+    background: #4C1C24;
 }
 
 nav.sticky ul li a {
     color:rgb(199, 21, 8);
 }
 
-nav .toggle_btn {
-    color: #fff;
-    font-size: 1.5rem;
+  .toggle_btn {
+    width: 5%;
+    color: rgb(199,21,8);
+    font-size: 1.5em;
+    margin-right: 70px;
+    float: right;
     cursor: pointer;
 }
 
@@ -200,17 +219,17 @@ a:visited {
 }
 
 a:visited {
-    color: teal;
+    color: #fff;
 }
 
 /* DROPDOWN MENU */
-.dropdown_menu {
-    position: absolute;
-    right: 2rem;
-    top: 85px;
+ .dropdown_menu {
+    position: absolute; 
+    right: 8rem;
+    top: 105px;
     height: 0;
     width: 300px;
-    background: rgb(50, 87, 117);
+    background: rgb(109, 8, 8);
     backdrop-filter: blur(15px);
     border-radius: 5px;
     overflow: hidden;
@@ -233,7 +252,12 @@ a:visited {
 }
 
 .dropdown_menu li a:hover {
+    font-weight: 700;
     color: rgb(208, 220, 88);
+}
+
+.dropdown_menu li a:hover::after {
+    display: inline-block;
 }
 
 .dropdown_menu .action_btn {
@@ -253,7 +277,6 @@ a:visited {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
     background-color: skyblue;
 }
 
@@ -335,6 +358,15 @@ a:visited {
     font-weight: 400;
     margin: 0px 5px;
 }
+
+@media only screen and (max-width: 1536px) {
+   
+   
+    nav ul {
+           display: none;
+       }
+   
+    }
 
 @media (max-width: 700px) {
     .footerNav ul {
