@@ -108,10 +108,10 @@ input[type=submit]:hover {
 
 /* Contact */
 .contact {
+    display: flex;
     position: relative;
     min-height: 100vh;
     padding: 50px 100px;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -121,12 +121,12 @@ input[type=submit]:hover {
 
 .contact .content {
     max-width: 800px;
-    text-align: center;
+    text-align: center;  
 }
 
 .contact .content h2 {
     padding: 50px 100px;
-    margin-top: 30px;
+    margin-top: 8rem;
     text-align: center;
     font-size: 52px;
     font-weight: 500;
@@ -149,7 +149,7 @@ input[type=submit]:hover {
 }
 
 .container .contactInfo {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -159,6 +159,9 @@ input[type=submit]:hover {
     position: relative;
     padding: 20px 0;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .container .contactInfo .box .icon {
@@ -190,32 +193,39 @@ input[type=submit]:hover {
 .contactForm {
     width: 40%;
     padding: 40px;
-    background: #fff;
+    background: #4e221c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .contactForm h2 {
     font-size: 30px;
-    color: #333;
+    color: #fff;
     font-weight: 500;
+    margin-bottom: 20px;
+   
 }
 
 .contactForm .inputBox {
     position: relative;
     width: 100%;
-    margin-top: 10px;
+    color: rgb(78, 34, 28);
+    margin-top: 20px;
 }
 
 .contactForm .inputBox input,
 .contactForm .inputBox textarea 
 {
+    background-color: #4e221c;
     width: 100%;
-    padding: 5px 0;
+    padding: 10px;
     font-size: 16px;
     margin: 10px 0;
     border: none;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #fff;
     outline: none;
     resize: none;
+    border-radius: 5px;
 }
 
 .contactForm .inputBox span {
@@ -226,7 +236,7 @@ input[type=submit]:hover {
     margin: 10px 0;
     pointer-events: none;
     transition: 0.5s;
-    color: #666;
+    color: #afa8a8;
 }
 
 .contactForm .inputBox input:focus ~ span,
@@ -234,19 +244,32 @@ input[type=submit]:hover {
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span
  {
-    color: #00bcd4;
+    color: rgb(208, 220, 88);
     font-size: 12px;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
 }
 
 .contactForm .inputBox input[type="submit"] {
     width: 100x;
-    background: #00bcd4;
+    background: rgb(109, 31, 21);;
     color: #fff;
     border: none;
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.contactForm .inputBox input[type="submit"]:hover {
+    background: #8a2921;
+}
+
+@media (max-width: 768px) {
+    .contactForm {
+        width: 80%;
+        padding: 20px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -336,7 +359,7 @@ nav.sticky ul li a {
 
   .toggle_btn {
     width: 5%;
-    color: rgb(248, 0, 0);
+    color: rgb(59, 7, 0);
     font-size: 1.5em;
     margin-right: 70px;
     float: right;
@@ -400,7 +423,7 @@ a:visited {
 }
 
 a:visited {
-    color: teal;
+    color: rgb(255, 255, 255);
 }
 
 /* DROPDOWN MENU */

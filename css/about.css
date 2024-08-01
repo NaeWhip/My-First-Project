@@ -1,16 +1,74 @@
 .about {
-    min-height: 75vh;
-    padding: 176px;
-    background-color: #66b7c2;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    background: url(../img/aboutbg.png);
+    background-size: cover;
+    overflow-x: hidden;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 20px;
+        background-size: contain; /* Adjust background size for better fit */
+    }
+
+    .about img {
+        width: 100%; /* Make image responsive */
+        max-width: 600px; /* Ensure image does not become too large */
+    }
+
+    .about-text {
+        width: 100%; /* Ensure text container is full width */
+        max-width: 90%; /* Prevent it from being too wide */
+        margin-bottom: 20px; /* Reduce margin for smaller screens */
+    }
+}
+
+/* Image */
 
 .about img {
     height: auto;
-    width: 550px;
+    width: 750px;
 }
+
+.container {
+    position: relative;
+    margin-bottom: 20%;
+
+}
+
+.image1 {
+    margin-right: 50%;
+}
+
+.image2 {
+    margin-right: 50%;
+    padding-top: 10%;
+    padding-left: 1%;
+}
+
+.image3 {
+    margin-right: 50%;
+    padding-top: 10%;
+    padding-left: 1%;
+}
+
+/* Text */
 
 .about-text {
     width: 750px;
+    padding: 20px;
+    margin-bottom: 5%;
+    background-color:rgb(31, 24, 12);
+    border-style: ridge;
+    border-radius: 25px;
 }
 
 .main {
@@ -39,10 +97,10 @@
 }
 
 .about-text p {
-    color: rgb(68, 68, 3);
+    color: rgb(255, 255, 255);
     letter-spacing: 1px;
     line-height: 50px;
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 45px;
 }
 
@@ -67,9 +125,9 @@ button:hover {
 nav {
     width: 100%;
     margin: 0 auto;
-    padding: 40px 100px;
+    padding: 40px 60px;
     height: 60px;
-    max-width: 2350px;
+    max-width: 2620px;
     z-index: 100000;
     display: flex;
     align-items: center;
@@ -95,7 +153,7 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    margin: 0 20px;
+    margin: 0 45px;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
@@ -105,7 +163,7 @@ nav ul li a {
     transition: 0.6s;
 }
 
-nav ul li::after {
+nav ul li a::after {
     content: '';
     height: 3px;
     width: 0;
@@ -116,7 +174,7 @@ nav ul li::after {
     transition: 0.6s;
 
 }
-nav ul li:hover::after {
+nav ul li a:hover::after {
     width: 100%;
 }
 
@@ -126,18 +184,22 @@ nav.logo {
 }
 
 nav.sticky {
-    padding: 5px 100px;
-    background: skyblue;
+    padding: 5px 60px;
+    background: #808000;
 }
 
 nav.sticky ul li a {
     color:rgb(199, 21, 8);
 }
 
-nav .toggle_btn {
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
+    .toggle_btn {
+        color: #4003b1;
+        font-size: 1.5rem;
+        cursor: pointer;
+}
+
+nav.sticky .toggle_btn {
+    color: 4003b1;
 }
 
 .action_btn {
@@ -193,14 +255,12 @@ a:visited {
 }
 
 a:visited {
-    color: teal;
+    color: #fff;
 }
 
 /* DROPDOWN MENU */
 .dropdown_menu {
     position: absolute;
-    right: 2rem;
-    top: 85px;
     height: 0;
     width: 300px;
     background: rgb(35, 38, 80);
@@ -248,7 +308,7 @@ a:visited {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: skyblue;
+    background-color: #808000;
 }
 
 .pic {
@@ -341,3 +401,107 @@ a:visited {
         margin: 10px;
     }
 }
+
+/* RESPONSIVE */
+
+/* About Response */
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 20px;
+        background-size: contain; /* Adjust background size for better fit */
+    }
+
+    .about img {
+        width: 100%; /* Make image responsive */
+        max-width: 600px; /* Ensure image does not become too large */
+    }
+
+    .about-text {
+        width: 100%; /* Ensure text container is full width */
+        max-width: 90%; /* Prevent it from being too wide */
+        margin-bottom: 20px; /* Reduce margin for smaller screens */
+    }
+}
+
+/* Container Response */
+
+@media (max-width: 768px) {
+    .container {
+        margin-bottom: 10%; /* Reduce bottom margin */
+    }
+}
+
+/* Text Response */
+@media (max-width: 768px) {
+
+    .about-text {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 90%; /* Prevent too much padding */
+        margin-bottom: 20px; /* Reduce margin */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .about-text h1 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .about-text h5 {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Adjust font size */
+        line-height: 1.5; /* Adjust line height */
+    }
+}
+
+/* Main Response */
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 100px; /* Adjust top margin */
+    }
+}
+
+/* Action Button */
+
+@media (max-width: 768px) {
+    .action_btn, .btn {
+        padding: 10px 20px; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+/* Dropdown Menu Response */
+
+@media (max-width: 768px) {
+    .dropdown_menu {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 858px) {
+
+    .col {
+        flex: 80%;
+        max-width: 60%;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+}
+
+/* Nav Response */
+@media only screen and (max-width: 1536px) {
+   
+   
+    nav ul {
+           display: none;
+       }
+   
+    }

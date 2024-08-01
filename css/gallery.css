@@ -137,12 +137,12 @@ nav.sticky {
 }
 
 nav.sticky ul li a {
-    color:rgb(208, 220, 88);
+    color:red;
 }
 
   .toggle_btn {
     width: 5%;
-    color: rgb(208, 220, 88);
+    color: rgb(232, 233, 220);
     font-size: 1.5em;
     margin-right: 70px;
     float: right;
@@ -206,7 +206,7 @@ a:visited {
 }
 
 a:visited {
-    color: teal;
+    color: rgb(96, 112, 112);
 }
 
 /* DROPDOWN MENU */
